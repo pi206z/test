@@ -95,7 +95,7 @@ public void ValidationBackMultipleChooseRegion() {
     driver.findElement(By.name("Experience")).sendKeys("20");
     driver.findElement(By.id("submit")).click();
     WebElement ValidationMessage = driver.findElement(By.xpath("//h1"));
-    System.out.println("Пользователю выдано сообщение: " + ValidationMessage.getText());
+    System.out.println("РџРѕР»СЊР·РѕРІР°С‚РµР»СЋ РІС‹РґР°РЅРѕ СЃРѕРѕР±С‰РµРЅРёРµ: " + ValidationMessage.getText());
     driver.navigate().back();
     driver.navigate().refresh();
 }
@@ -108,7 +108,7 @@ public void CalculationForMoscow() {
     driver.findElement(By.name("Experience")).sendKeys("5");
     driver.findElement(By.id("submit")).click();
     WebElement ResultMessage = driver.findElement(By.xpath("//h1"));
-    System.out.println("Для Москвы " + ResultMessage.getText());
+    System.out.println("Р”Р»СЏ РњРѕСЃРєРІС‹ " + ResultMessage.getText());
     driver.navigate().back();
     driver.navigate().refresh();
 }
@@ -121,7 +121,7 @@ public void CalculationForSPB() {
 	driver.findElement(By.id("submit")).click();
 	driver.findElement(By.xpath("//h1")).click();
 	WebElement ResultMessage = driver.findElement(By.xpath("//h1"));
-	System.out.println("Для СПб " +ResultMessage.getText());
+	System.out.println("Р”Р»СЏ РЎРџР± " +ResultMessage.getText());
 	driver.navigate().back();
 	driver.navigate().refresh();
 }
@@ -134,7 +134,7 @@ public void CalculationForUfa() {
 	driver.findElement(By.id("submit")).click();
 	driver.findElement(By.xpath("//h1")).click();
 	WebElement ResultMessage = driver.findElement(By.xpath("//h1"));
-	System.out.println("Для Уфы " + ResultMessage.getText());
+	System.out.println("Р”Р»СЏ РЈС„С‹ " + ResultMessage.getText());
     driver.navigate().back();
     driver.navigate().refresh();
 }
