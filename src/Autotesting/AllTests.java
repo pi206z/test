@@ -15,13 +15,13 @@ public class AllTests {
 	
 	@BeforeClass
 	public static void openBrowser(){
-	System.setProperty("webdriver.gecko.driver", "D:\\Workspace\\OSAGOCalculatorTesting\\selenium\\geckodriver.exe");
+	System.setProperty("webdriver.gecko.driver", "geckodriver");
 	driver = new FirefoxDriver();
 	driver.manage().timeouts().implicitlyWait(30, TimeUnit.SECONDS);
 	}
 @Test
 public void ElementsVisibility() {
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	driver.get("http://localhost:8080/OSAGOCalculator/");
 	driver.findElement(By.xpath("//h1")).click();
 	driver.findElement(By.xpath("//h2")).click();
 	driver.findElement(By.xpath("//label")).click();
@@ -38,8 +38,8 @@ public void ElementsVisibility() {
 }
 @Test
 public void ValidationFrontRegionUsage() {
-	String ResultHTML = "http://localhost:8081/OSAGOCalculator/Result.html";
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	String ResultHTML = "http://localhost:8080/OSAGOCalculator/Result.html";
+	driver.get("http://localhost:8080/OSAGOCalculator/");
 	driver.findElement(By.xpath("//label")).click();
 	driver.findElement(By.xpath("//label[2]")).click();
 	driver.findElement(By.xpath("//label[3]")).click();
@@ -50,8 +50,8 @@ public void ValidationFrontRegionUsage() {
 }
 @Test
 public void ValidationFrontPower() {
-	String ResultHTML = "http://localhost:8081/OSAGOCalculator/Result.html";
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	String ResultHTML = "http://localhost:8080/OSAGOCalculator/Result.html";
+	driver.get("http://localhost:8080/OSAGOCalculator/");
 	    driver.findElement(By.name("Power")).sendKeys("900");
 	    driver.findElement(By.name("Age")).sendKeys("50");
 	    driver.findElement(By.name("Experience")).sendKeys("18");
@@ -62,8 +62,8 @@ public void ValidationFrontPower() {
 }
 @Test
 public void ValidationFrontAge() {
-	String ResultHTML = "http://localhost:8081/OSAGOCalculator/Result.html";
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	String ResultHTML = "http://localhost:8080/OSAGOCalculator/Result.html";
+	driver.get("http://localhost:8080/OSAGOCalculator/");
 	driver.findElement(By.name("Power")).sendKeys("70");
 	driver.findElement(By.name("Age")).sendKeys("150");
 	driver.findElement(By.name("Experience")).sendKeys("12");
@@ -74,8 +74,8 @@ public void ValidationFrontAge() {
 }
 @Test
 public void ValidationFrontExperience() {
-	String ResultHTML = "http://localhost:8081/OSAGOCalculator/Result.html";
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	String ResultHTML = "http://localhost:8080/OSAGOCalculator/Result.html";
+	driver.get("http://localhost:8080/OSAGOCalculator/");
     driver.findElement(By.name("Power")).sendKeys("70");
     driver.findElement(By.name("Age")).sendKeys("80");
     driver.findElement(By.name("Experience")).sendKeys("-2");
@@ -86,7 +86,7 @@ public void ValidationFrontExperience() {
 }
 @Test
 public void ValidationBackMultipleChooseRegion() {
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	driver.get("http://localhost:8080/OSAGOCalculator/");
 	driver.findElement(By.xpath("//label")).click();
 	driver.findElement(By.xpath("//label[2]")).click();
 	driver.findElement(By.xpath("//label[3]")).click();
@@ -101,7 +101,7 @@ public void ValidationBackMultipleChooseRegion() {
 }
 @Test
 public void CalculationForMoscow() {
-	driver.get("http://localhost:8081/OSAGOCalculator/");
+	driver.get("http://localhost:8080/OSAGOCalculator/");
 	driver.findElement(By.xpath("//label")).click();
     driver.findElement(By.name("Power")).sendKeys("70");
     driver.findElement(By.name("Age")).sendKeys("30");
